@@ -1,17 +1,108 @@
-/* Error: Undefined mixin.
- *    ,
- * 98 |       @include orange_hover();
- *    |       ^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   index.scss 98:7  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 98 \2502        @include orange_hover();\d\a    \2502        ^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   index.scss 98:7  root stylesheet";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #d8dbe8;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+nav .top_nav {
+  flex-basis: 2;
+  display: flex;
+}
+nav .top_nav span {
+  display: flex;
+}
+nav .top_nav .top_nav_child {
+  display: flex;
+}
+nav .bottom_nav {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5em;
+  padding: 0em 2em;
+  flex-basis: 2;
+}
+nav .bottom_nav #logo {
+  height: 80px;
+}
+nav .bottom_nav .bottom_nav_right {
+  display: flex;
+  gap: 1em;
+}
+nav .bottom_nav .search_box {
+  display: flex;
+  gap: 10px;
+}
+nav .bottom_nav .search_input_box {
+  border: 1.5px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+nav .bottom_nav #item_search {
+  width: 30em;
+  border: none;
+  outline: none;
+}
+nav .bottom_nav .search_button {
+  background-color: #f68b1e;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  width: 80px;
+  box-shadow: 2px 2px 5px 1px #cdcdcd, -2px 0px 5px 1px #cdcdcd;
+}
+nav .bottom_nav .search_button:hover {
+  background-color: #d87109;
+}
+nav .bottom_nav .nav_item {
+  border: none;
+  background-color: white;
+  gap: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav .bottom_nav .nav_item:hover {
+  color: #ff9900;
+}
+nav .bottom_nav .nav_item .bi:not(.bi-chevron-down) {
+  font-size: 23px;
+  font-weight: bolder;
+}
+nav .bottom_nav .account_list {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 15px;
+  width: 12em;
+  height: 10em;
+  border-radius: 5px;
+  position: absolute;
+}
+nav .bottom_nav .account_list button {
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  box-shadow: 2px 2px 1px #d8dbe8;
+}
+nav .bottom_nav .account_list button:hover {
+  background-color: #d87109;
+}
+
+/*# sourceMappingURL=index.css.map */
