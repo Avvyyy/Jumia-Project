@@ -14,6 +14,7 @@
       src="https://kit.fontawesome.com/457367cb8c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="JS/dom_manipluation.js"></script>
   </head>
   <body>
     <nav>
@@ -29,10 +30,13 @@
             </div> -->
       </div>
 
+      <!-- Lower Nav Elements -->
       <div class="bottom_nav">
         <img src="IMG/download.png" alt="Jumia Logo" id="logo" />
 
+        <!-- Elements of nav outside logo -->
         <div class="bottom_nav_right">
+          <!-- Search Box Element -->
           <div class="search_box">
             <div class="search search_input_box">
               <i class="bi bi-search"> </i>
@@ -45,22 +49,27 @@
             </div>
             <button class="search_button">Search</button>
           </div>
+
+          <!-- Elements containing nav-redirections -->
           <button class="nav_item">
             <i class="bi bi-person"></i>
             Account
             <i class="bi bi-chevron-down"></i>
           </button>
+
+          <!-- Elements of the nav-redirection-list -->
           <div class="nav_item_list account_list">
             <button class="nav_button">Sign Up</button>
-            <div>
+            <!-- <hr> -->
+            <div class="nav_link_div">
               <i class="bi bi-person"></i>
               <a href="/" class="nav_link">Account</a>
             </div>
-            <div>
+            <div class="nav_link_div">
               <i class="bi bi-shop"></i>
               <a href="/" class="nav_link">Order</a>
             </div>
-            <div>
+            <div class="nav_link_div">
               <i class="bi bi-heart"></i>
               <a href="/" class="nav_link">Saved Items</a>
             </div>

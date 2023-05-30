@@ -3,6 +3,9 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
 }
 
 //Colour Variable
@@ -21,89 +24,140 @@ body {
 }
 
 //Stylings for nav elements
-nav {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-
-  //Stylings for top nav portion
-  .top_nav {
-    flex-basis: 2;
+nav 
+{
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 
-    span {
-      display: flex;
-    }
-
-    .top_nav_child {
-      display: flex;
-    }
-  }
-
-  .bottom_nav {
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.5em;
-    padding: 0em 2em;
-    flex-basis: 2;
-
-    #logo {
-      // width: 100px;
-      height: 80px;
-    }
-
-    .bottom_nav_right {
-      display: flex;
-      gap: 1em;
-    }
-
-    .search_box {
-      display: flex;
-      gap: 10px;
-    }
-    .search_input_box {
-      border: 1.5px solid gray;
-      border-radius: 5px;
-      padding: 10px;
-    }
-
-    #item_search {
-      width: 30em;
-      border: none;
-      outline: none;
-    }
-
-    .search_button {
-      background-color: $nav_button;
-      color: #ffffff;
-      border-radius: 4px;
-      border: none;
-      width: 80px;
-      box-shadow: 2px 2px 5px 1px lighten(gray, 30%), -2px -0px 5px 1px lighten(gray, 30%);
-
-      &:hover {
-        background-color: darken($nav_button, 10%);
-      }
-    }
-
-    .nav_item {
-      border: none;
-      background-color: white;
-      gap: 10px;
-      font-weight: bold;
-      @include orange_hover();
-      @include nav_item_alignment();
-    }
-
-    
-    .account_list
+    //Stylings for top nav portion
+    .top_nav
     {
-      @include nav_item_list_styles();
-      // top: 10em;
+        flex-basis: 2;
+        display: flex;
+
+        span 
+        {
+            display: flex;
+        }
+
+        .top_nav_child
+        {
+            display: flex;
+        }
     }
-  }
+
+    .bottom_nav 
+    {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5em;
+        padding: 0em 2em;
+        flex-basis: 2;
+
+        #logo 
+        {
+          height: 80px;
+        }
+
+        // Sty;ing for lower nav elements outside logo
+        .bottom_nav_right 
+        {
+          display: flex;
+          gap: 1em;
+        }
+
+        // Styling for search box
+        .search_box 
+        {
+          display: flex;
+          gap: 10px;
+        }
+        .search_input_box 
+        {
+          border: 1.5px solid gray;
+          border-radius: 5px;
+          padding: 10px;
+        }
+
+        #item_search 
+        {
+          width: 30em;
+          border: none;
+          outline: none;
+        }
+
+        .search_button 
+        {
+          @include button_styles();
+          width: 80px;
+        }
+
+        // Styling for nav-redirection buttons and links
+        .nav_item 
+        {
+          border: none;
+          background-color: white;
+          gap: 10px;
+          font-weight: bold;
+          @include orange_hover();
+          @include nav_item_alignment();
+
+          hr
+          {
+            background-color: black;
+            color: black
+          }
+        }
+
+        // Styling for nav-redirection list
+        .account_list
+        {
+          @include nav_item_list_styles();
+          top: 100%;
+          left: 65%;
+        }
+
+        // Styling for the buttons that come with the nav-item lists
+        .nav_button 
+        {
+          @include button_styles();
+          width: 150px;
+          height: 40px;
+        }
+
+        .nav_link_div
+        {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: flex-start;
+          justify-content:last baseline;
+          font-size:15px;
+          font-weight: 400;
+          padding: 5px;
+
+          &:hover
+          {
+            background-color: lighten($bckg_color, 5%);
+            font-weight: 600;
+            transition: ease-in .3s;
+          }
+
+          .bi
+          {
+            font-size: 20px;
+            font-weight: bolder;
+          }
+          
+          a
+          {
+            color: darken($bckg_color, 50%);
+          }
+        }
+    }
 }

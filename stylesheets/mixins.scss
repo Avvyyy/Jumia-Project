@@ -25,20 +25,25 @@
   gap: 1em;
   padding: 15px;
   width: 12em;
-  height: 10em;
+  height: max-content;
   border-radius: 5px;
   position: absolute;
+  display: none;
+}
 
-  button
-  {
-    background-color: $highlight;
-    color: $white;
+@mixin button_styles
+{
+    background-color: $nav_button;
+    color: #ffffff;
+    border-radius: 4px;
     border: none;
-    box-shadow: 2px 2px 1px $bckg_color;
+    box-shadow: 2px 2px 5px lighten(gray, 40%), -2px 0px 10px 1px lighten(gray, 40%);
+    font-family: sans-serif;
+    font-weight: bold;
 
-    &:hover {
+    &:hover
+    {
       background-color: darken($nav_button, 10%);
     }
-  }
 
 }
