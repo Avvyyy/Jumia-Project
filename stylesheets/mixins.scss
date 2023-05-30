@@ -1,0 +1,44 @@
+//Mixin for changing to orange colour on hover
+
+@mixin orange_hover {
+  &:hover {
+    color: $highlight;
+  }
+}
+
+@mixin nav_item_alignment {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .bi:not(.bi-chevron-down) {
+    font-size: 23px;
+    font-weight: bolder;
+  }
+}
+
+@mixin nav_item_list_styles
+{
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 15px;
+  width: 12em;
+  height: 10em;
+  border-radius: 5px;
+  position: absolute;
+
+  button
+  {
+    background-color: $highlight;
+    color: $white;
+    border: none;
+    box-shadow: 2px 2px 1px $bckg_color;
+
+    &:hover {
+      background-color: darken($nav_button, 10%);
+    }
+  }
+
+}
